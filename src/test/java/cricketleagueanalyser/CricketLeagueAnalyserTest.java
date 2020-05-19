@@ -85,4 +85,16 @@ public class CricketLeagueAnalyserTest {
         } catch (CricketLeagueAnalyserException e) {}
     }
 
+    @Test
+    public void givenIPLMostRunsData_whenSortedAccordingToStrikeRate_shouldReturnSortedResults() {
+        try {
+            CricketLeagueAnalyser cricketLeagueAnalyser = new CricketLeagueAnalyser();
+            cricketLeagueAnalyser.loadBatsmanData(IPL_MOSTRUNS_DATA);
+            String sortedBatsmanData = cricketLeagueAnalyser.getSortedBatsmanDataAccordingToStrikingRate();
+            BatsmanDataCsv[] iplBatsmanData = new Gson().fromJson(sortedBatsmanData, BatsmanDataCsv[].class);
+            Assert.assertEquals("Ishant Sharma", iplBatsmanData[0].player);
+            Assert.assertEquals("Bhuvneshwar Kumar", iplBatsmanData[99].player);
+        } catch (CricketLeagueAnalyserException e) {}
+    }
+
 }

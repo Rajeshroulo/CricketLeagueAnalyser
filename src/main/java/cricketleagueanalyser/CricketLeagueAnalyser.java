@@ -16,11 +16,15 @@ public class CricketLeagueAnalyser {
 
     public String getSortedBatsmanDataAccordingToBattingAverage() throws CricketLeagueAnalyserException {
         Comparator<CricketAnalyserDAO> censusComparator = Comparator.comparing(iplData -> iplData.average);
-        return this.getSortedCensusData(censusComparator.reversed());
+        return this.getSortedCricketLeagueData(censusComparator.reversed());
     }
 
+    public String getSortedBatsmanDataAccordingToStrikingRate() throws CricketLeagueAnalyserException {
+        Comparator<CricketAnalyserDAO> censusComparator = Comparator.comparing(iplData -> iplData.strikeRate);
+        return this.getSortedCricketLeagueData(censusComparator.reversed());
+    }
 
-    private String getSortedCensusData(Comparator<CricketAnalyserDAO> censusComparator) throws CricketLeagueAnalyserException {
+    private String getSortedCricketLeagueData(Comparator<CricketAnalyserDAO> censusComparator) throws CricketLeagueAnalyserException {
         if(iplAnalyserMap == null || iplAnalyserMap.size() == 0 ) {
             throw new CricketLeagueAnalyserException("No Data",
                     CricketLeagueAnalyserException.ExceptionType.NO_DATA);

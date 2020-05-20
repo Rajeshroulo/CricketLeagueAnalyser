@@ -122,7 +122,7 @@ public class CricketLeagueAnalyserTest {
     }
 
     @Test
-    public void givenIPL2019MostRunsData_whenSortedAccordingToStrikeRate_shouldReturnBattingAverage() {
+    public void givenIPLMostRunsData_whenSortedAccordingToStrikeRate_shouldReturnBattingAverage() {
         try {
             CricketLeagueAnalyser cricketLeagueAnalyser = new CricketLeagueAnalyser(CricketLeagueAnalyser.Cricket.BATTING);
             cricketLeagueAnalyser.loadBatsmanData(IPL_MOSTRUNS_DATA);
@@ -142,6 +142,18 @@ public class CricketLeagueAnalyserTest {
             BatsmanDataCsv[] iplBatsmanData = new Gson().fromJson(sortedBatsmanData, BatsmanDataCsv[].class);
             Assert.assertEquals(416, iplBatsmanData[0].runs);
             Assert.assertEquals(20, iplBatsmanData[99].runs);
+        } catch (CricketLeagueAnalyserException e) {}
+    }
+
+    @Test
+    public void givenIPLMostRuns_whenSortedAccordingToStrikeRateWithSixsAndFours_shouldReturnSortedResults() {
+        try {
+            CricketLeagueAnalyser cricketLeagueAnalyser = new CricketLeagueAnalyser(CricketLeagueAnalyser.Cricket.BATTING);
+            cricketLeagueAnalyser.loadBatsmanData(IPL_MOSTRUNS_DATA);
+            String sortedBatsmanData = cricketLeagueAnalyser.getSortedDataAccordingToStrikeRateWithSixsAndFours(CricketLeagueAnalyser.Cricket.BATTING);
+            BatsmanDataCsv[] iplBatsmanData = new Gson().fromJson(sortedBatsmanData, BatsmanDataCsv[].class);
+            Assert.assertEquals("Andre Russell", iplBatsmanData[0].player);
+            Assert.assertEquals("Shakib Al Hasan", iplBatsmanData[99].player);
         } catch (CricketLeagueAnalyserException e) {}
     }
 

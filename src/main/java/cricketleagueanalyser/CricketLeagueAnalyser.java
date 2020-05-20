@@ -40,6 +40,13 @@ public class CricketLeagueAnalyser {
         return this.getSortedCricketLeagueData(censusComparator.reversed(),cricket);
     }
 
+    public String getSortedDataAccordingToStrikeRateWithSixsAndFours(Cricket cricket) throws CricketLeagueAnalyserException {
+        Comparator<CricketAnalyserDAO> sortByStrikeRate = Comparator.comparing(iplData -> (iplData.six*6 + iplData.four*4));
+        Comparator<CricketAnalyserDAO> sortByStrikeWithSixsAndFour = sortByStrikeRate.thenComparing(iplData -> iplData.strikeRate);
+        return this.getSortedCricketLeagueData(sortByStrikeWithSixsAndFour.reversed(),cricket);
+    }
+
+
     private String getSortedCricketLeagueData(Comparator<CricketAnalyserDAO> censusComparator, Cricket cricket) throws CricketLeagueAnalyserException {
         if(iplAnalyserMap == null || iplAnalyserMap.size() == 0 ) {
             throw new CricketLeagueAnalyserException("No Data",

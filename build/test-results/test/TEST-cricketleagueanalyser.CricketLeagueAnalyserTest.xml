@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="cricketleagueanalyser.CricketLeagueAnalyserTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2020-05-20T06:07:08" hostname="LAPTOP-U0R5V4IK" time="0.463">
+<testsuite name="cricketleagueanalyser.CricketLeagueAnalyserTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2020-05-20T07:15:52" hostname="LAPTOP-U0R5V4IK" time="0.526">
   <properties/>
-  <testcase name="givenIPLMostRunsData_whenSortedAccordingToSixsAndFours_shouldReturnSortedResults" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.463">
-    <failure message="org.junit.ComparisonFailure: expected:&lt;[Andre Russell]&gt; but was:&lt;[Marcus Stoinis]&gt;" type="org.junit.ComparisonFailure">org.junit.ComparisonFailure: expected:&lt;[Andre Russell]&gt; but was:&lt;[Marcus Stoinis]&gt;
-	at org.junit.Assert.assertEquals(Assert.java:115)
-	at org.junit.Assert.assertEquals(Assert.java:144)
-	at cricketleagueanalyser.CricketLeagueAnalyserTest.givenIPLMostRunsData_whenSortedAccordingToSixsAndFours_shouldReturnSortedResults(CricketLeagueAnalyserTest.java:107)
+  <testcase name="givenIPL2019MostRunsData_whenSortedAccordingToStrikeRate_shouldReturnBattingAverage" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.526">
+    <failure message="java.lang.AssertionError: expected:&lt;0.0&gt; but was:&lt;83.2&gt;" type="java.lang.AssertionError">java.lang.AssertionError: expected:&lt;0.0&gt; but was:&lt;83.2&gt;
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:834)
+	at org.junit.Assert.assertEquals(Assert.java:553)
+	at org.junit.Assert.assertEquals(Assert.java:683)
+	at cricketleagueanalyser.CricketLeagueAnalyserTest.givenIPL2019MostRunsData_whenSortedAccordingToStrikeRate_shouldReturnBattingAverage(CricketLeagueAnalyserTest.java:131)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)

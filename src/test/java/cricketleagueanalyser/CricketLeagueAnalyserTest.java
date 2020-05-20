@@ -252,4 +252,16 @@ public class CricketLeagueAnalyserTest {
         } catch (CricketLeagueAnalyserException e) {}
     }
 
+    @Test
+    public void givenIPLMostWktssData_whenSortedAccordingToWicketsWithBowlingAverage_shouldReturnSortedResults() {
+        try {
+            CricketLeagueAnalyser cricketLeagueAnalyser = new CricketLeagueAnalyser(CricketLeagueAnalyser.Cricket.BOWLING);
+            cricketLeagueAnalyser.loadIPLData(IPL_MOSTWKTS_DATA);
+            String sortedBatsmanData = cricketLeagueAnalyser.getSortedDataAccordingToWicketsWithAverage(CricketLeagueAnalyser.Cricket.BOWLING);
+            BowlerDataCsv[] iplBatsmanData = new Gson().fromJson(sortedBatsmanData, BowlerDataCsv[].class);
+            Assert.assertEquals("Imran Tahir", iplBatsmanData[0].player);
+            Assert.assertEquals("Yusuf Pathan", iplBatsmanData[98].player);
+        } catch (CricketLeagueAnalyserException e) {}
+    }
+
 }

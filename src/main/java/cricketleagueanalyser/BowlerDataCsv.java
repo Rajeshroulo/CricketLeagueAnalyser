@@ -12,6 +12,9 @@ public class BowlerDataCsv {
     @CsvBindByName(column = "5w", required = true)
     public int fiveWickets;
 
+    @CsvBindByName(column = "Wkts", required = true)
+    public int wickets;
+
     @CsvBindByName(column = "Avg", required = true)
     public double bowlingAverage;
 
@@ -23,13 +26,14 @@ public class BowlerDataCsv {
 
     public BowlerDataCsv () {}
 
-    public BowlerDataCsv(String player, double bowlingAverage, double bowlingStrikeRate, double economy, int fourWickets, int fiveWickets) {
+    public BowlerDataCsv(String player, double bowlingAverage, double bowlingStrikeRate, double economy, int fourWickets, int fiveWickets, int wickets) {
         this.fiveWickets = fiveWickets;
         this.bowlingAverage = bowlingAverage;
         this.fourWickets = fourWickets;
         this.economy = economy;
         this.player = player;
         this.bowlingStrikeRate = bowlingStrikeRate;
+        this.wickets = wickets;
     }
 
     @Override
@@ -38,6 +42,7 @@ public class BowlerDataCsv {
                 "player='" + player + '\'' +
                 ", fourWickets=" + fourWickets +
                 ", fiveWickets=" + fiveWickets +
+                ", wickets=" + wickets +
                 ", bowlingAverage=" + bowlingAverage +
                 ", bowlingStrikeRate=" + bowlingStrikeRate +
                 ", economy=" + economy +

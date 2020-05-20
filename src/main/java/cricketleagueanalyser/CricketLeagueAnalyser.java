@@ -20,13 +20,8 @@ public class CricketLeagueAnalyser {
     Comparator<CricketAnalyserDAO> sortBySixAndFour = Comparator.comparing(iplData -> (iplData.six*6 + iplData.four*4));
     Comparator<CricketAnalyserDAO> sortByRuns = Comparator.comparing(iplData -> iplData.runs);
 
-    public int loadBatsmanData(String csvFilePath) throws CricketLeagueAnalyserException {
-        iplAnalyserMap = new CricketLeagueDataLoader().getCricketLeagueData(BatsmanDataCsv.class,csvFilePath);
-        return iplAnalyserMap.size();
-    }
-
-    public int loadBowlerData(String csvFilePath) throws CricketLeagueAnalyserException {
-        iplAnalyserMap = new CricketLeagueDataLoader().getCricketLeagueData(BowlerDataCsv.class, csvFilePath);
+    public int loadIPLData(String csvFilePath) throws CricketLeagueAnalyserException {
+        iplAnalyserMap = new CricketLeagueDataAdapterFactory().getCricketLeagueData(cricket,csvFilePath);
         return iplAnalyserMap.size();
     }
 

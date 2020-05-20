@@ -14,7 +14,9 @@ import java.util.Map;
 import java.util.stream.StreamSupport;
 
 
-public class CricketLeagueDataLoader {
+public abstract class CricketLeagueDataAdapter {
+    public abstract Map<String, CricketAnalyserDAO> loadIPLData(String csvFilePath) throws CricketLeagueAnalyserException;
+
     Map<String, CricketAnalyserDAO> iplAnalyserMap = new HashMap<>();
 
     public <E> Map<String,CricketAnalyserDAO> getCricketLeagueData(Class<E> iplDataCsvClass,String csvFilePath) throws CricketLeagueAnalyserException {

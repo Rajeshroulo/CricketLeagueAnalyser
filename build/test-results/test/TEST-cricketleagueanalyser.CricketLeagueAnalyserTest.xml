@@ -1,26 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="cricketleagueanalyser.CricketLeagueAnalyserTest" tests="20" skipped="0" failures="0" errors="0" timestamp="2020-05-20T11:43:42" hostname="LAPTOP-U0R5V4IK" time="2.428">
+<testsuite name="cricketleagueanalyser.CricketLeagueAnalyserTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-05-20T11:51:54" hostname="LAPTOP-U0R5V4IK" time="0.418">
   <properties/>
-  <testcase name="givenIPLMostRunsData_whenSortedAccordingToRunsWithBattingAverage_shouldReturnSortedResults" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.492"/>
-  <testcase name="givenIPLMostRunsData_WhenEmpty_ShouldThrowException" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.003"/>
-  <testcase name="givenIPLMostRunsData_whenSortedAccordingToBattingAverageWithStrikeRate_shouldReturnSortedResults" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.149"/>
-  <testcase name="givenIPLMostRunsData_whenSortedAccordingToStrikeRate_shouldReturnBattingAverage" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.119"/>
-  <testcase name="givenIPLMOstRunsData_WithWrongPath_ShouldThrowException" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.002"/>
-  <testcase name="givenIPLMostRunsData_WithWrongType_ShouldThrowException" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.007"/>
-  <testcase name="givenIPLMostRunsData_WithWrongDelimiter_ShouldThrowException" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.002"/>
-  <testcase name="givenIPLMostRunsData_whenSortedAccordingToSixsAndFours_shouldReturnSortedResults" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.155"/>
-  <testcase name="givenIPLMostRuns_whenSortedAccordingToStrikeRateWithSixsAndFours_shouldReturnSortedResults" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.171"/>
-  <testcase name="givenIPLMostRunsData_WithWrongHeader_ShouldThrowException" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.013"/>
-  <testcase name="givenIPLMostWktsData_whenSortedAccordingToBowlingAverage_shouldReturnSortedResults" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.112"/>
-  <testcase name="givenIPLMostWktsData_whenSortedAccordingToStringRateWithFiveWicketsAndFourWicket_shouldReturnSortedResults" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.14"/>
-  <testcase name="givenIPLMostRunsData_whenSortedAccordingToBattingAverage_shouldReturnSortedResults" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.115"/>
-  <testcase name="givenIPLMostRunsData_shouldReturnTotalNumberOfPlayers" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.118"/>
-  <testcase name="givenIPLMostWktsData_shouldReturnTotalNumberOfPlayers" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.122"/>
-  <testcase name="givenIPLMostWktsData_whenSortedAccordingToEconomy_shouldReturnSortedResults" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.112"/>
-  <testcase name="givenIPL2019MostRunsData_whenSortedAccordingToBattingAverage_shouldReturnTotalNumberOfRunsOfPlayer" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.159"/>
-  <testcase name="givenIPL2019MostRunsData_whenSortedAccordingToSixsAndFours_shouldReturnSrikeRate" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.136"/>
-  <testcase name="givenIPLMostWktsData_whenSortedAccordingToStrikeRate_shouldReturnSortedResults" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.118"/>
-  <testcase name="givenIPLMostRunsData_whenSortedAccordingToStrikeRate_shouldReturnSortedResults" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.17"/>
+  <testcase name="givenIPLMostWktsData_whenSortedAccordingToStringRateWithFiveWicketsAndFourWicket_shouldReturnSortedResults" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.418"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

@@ -236,9 +236,8 @@ public class CricketLeagueAnalyserTest {
             String sortedBatsmanData = cricketLeagueAnalyser.getSortedDataAccordingToStrikeRateWith5WicketsAnd4Wickets(CricketLeagueAnalyser.Cricket.BOWLING);
             BowlerDataCsv[] iplBatsmanData = new Gson().fromJson(sortedBatsmanData, BowlerDataCsv[].class);
             Assert.assertEquals("Lasith Malinga", iplBatsmanData[0].player);
-            Assert.assertEquals("Yusuf Pathan", iplBatsmanData[98].player);
+            Assert.assertEquals("Yusuf Pathan", iplBatsmanData[99].player);
         } catch (CricketLeagueAnalyserException e) {}
     }
-
 
 }

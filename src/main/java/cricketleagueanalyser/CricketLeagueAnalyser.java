@@ -58,6 +58,12 @@ public class CricketLeagueAnalyser {
         return this.getSortedCricketLeagueData(sortByEconomy.reversed(),cricket);
     }
 
+    public String getSortedDataAccordingToStrikeRateWith5WicketsAnd4Wickets(Cricket cricket) throws CricketLeagueAnalyserException {
+        Comparator<CricketAnalyserDAO> sortByFiveAndFourWickets = Comparator.comparing(iplData -> (iplData.fiveWickets*5 + iplData.fourWickets*4));
+        Comparator<CricketAnalyserDAO> sortByStrikeWithFiveAndFourWickets = sortByFiveAndFourWickets.thenComparing(sortByStrike);
+        return this.getSortedCricketLeagueData(sortByStrikeWithFiveAndFourWickets.reversed(),cricket);
+    }
+
     private String getSortedCricketLeagueData(Comparator<CricketAnalyserDAO> censusComparator, Cricket cricket) throws CricketLeagueAnalyserException {
         if(iplAnalyserMap == null || iplAnalyserMap.size() == 0 ) {
             throw new CricketLeagueAnalyserException("No Data",

@@ -1,27 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="cricketleagueanalyser.CricketLeagueAnalyserTest" tests="22" skipped="0" failures="0" errors="0" timestamp="2020-05-20T12:25:36" hostname="LAPTOP-U0R5V4IK" time="2.624">
+<testsuite name="cricketleagueanalyser.CricketLeagueAnalyserTest" tests="24" skipped="0" failures="0" errors="0" timestamp="2020-05-20T15:36:27" hostname="LAPTOP-U0R5V4IK" time="3.76">
   <properties/>
-  <testcase name="givenIPLMostRunsData_whenSortedAccordingToRunsWithBattingAverage_shouldReturnSortedResults" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.516"/>
-  <testcase name="givenIPLMostRunsData_WhenEmpty_ShouldThrowException" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.003"/>
-  <testcase name="givenIPLMostRunsData_whenSortedAccordingToBattingAverageWithStrikeRate_shouldReturnSortedResults" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.162"/>
-  <testcase name="givenIPLMostRunsData_whenSortedAccordingToStrikeRate_shouldReturnBattingAverage" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.129"/>
+  <testcase name="givenIPLMostRunsData_whenSortedAccordingToRunsWithBattingAverage_shouldReturnSortedResults" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.495"/>
+  <testcase name="givenIPLMostRunsData_WhenEmpty_ShouldThrowException" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.002"/>
+  <testcase name="givenIPLMostRunsandWktsData_shouldReturnTotalNumberOfRecords" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.366"/>
+  <testcase name="givenIPLMostRunsData_whenSortedAccordingToBattingAverageWithStrikeRate_shouldReturnSortedResults" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.188"/>
+  <testcase name="givenIPLMostRunsData_whenSortedAccordingToStrikeRate_shouldReturnBattingAverage" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.167"/>
   <testcase name="givenIPLMOstRunsData_WithWrongPath_ShouldThrowException" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.003"/>
-  <testcase name="givenIPLMostRunsData_WithWrongType_ShouldThrowException" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.006"/>
+  <testcase name="givenIPLMostRunsData_WithWrongType_ShouldThrowException" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.015"/>
   <testcase name="givenIPLMostRunsData_WithWrongDelimiter_ShouldThrowException" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.002"/>
-  <testcase name="givenIPLMostRunsData_whenSortedAccordingToSixsAndFours_shouldReturnSortedResults" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.159"/>
-  <testcase name="givenIPLMostRuns_whenSortedAccordingToStrikeRateWithSixsAndFours_shouldReturnSortedResults" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.124"/>
-  <testcase name="givenIPLMostRunsData_WithWrongHeader_ShouldThrowException" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.013"/>
-  <testcase name="givenIPLMostWktsData_whenSortedAccordingToBowlingAverage_shouldReturnSortedResults" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.126"/>
-  <testcase name="givenIPLMostWktsData_whenSortedAccordingToStringRateWithFiveWicketsAndFourWicket_shouldReturnSortedResults" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.135"/>
-  <testcase name="givenIPLMostWktssData_whenSortedAccordingToWicketsWithBowlingAverage_shouldReturnSortedResults" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.114"/>
-  <testcase name="givenIPLMostRunsData_whenSortedAccordingToBattingAverage_shouldReturnSortedResults" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.12"/>
-  <testcase name="givenIPLMostRunsData_shouldReturnTotalNumberOfPlayers" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.117"/>
-  <testcase name="givenIPLMostWktsData_shouldReturnTotalNumberOfPlayers" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.152"/>
-  <testcase name="givenIPLMostWktsData_whenSortedAccordingToEconomy_shouldReturnSortedResults" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.132"/>
-  <testcase name="givenIPL2019MostRunsData_whenSortedAccordingToBattingAverage_shouldReturnTotalNumberOfRunsOfPlayer" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.13"/>
-  <testcase name="givenIPL2019MostRunsData_whenSortedAccordingToSixsAndFours_shouldReturnSrikeRate" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.133"/>
-  <testcase name="givenIPLMostWktsData_whenSortedAccordingToBowlingAverageWithStringRate_shouldReturnSortedResults" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.12"/>
-  <testcase name="givenIPLMostWktsData_whenSortedAccordingToStrikeRate_shouldReturnSortedResults" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.113"/>
+  <testcase name="givenIPLMostRunsandWktsData_whenSortedAccordingToBattingAndBowlingAverage_shouldReturnSortedResults" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.346"/>
+  <testcase name="givenIPLMostRunsData_whenSortedAccordingToSixsAndFours_shouldReturnSortedResults" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.174"/>
+  <testcase name="givenIPLMostRuns_whenSortedAccordingToStrikeRateWithSixsAndFours_shouldReturnSortedResults" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.172"/>
+  <testcase name="givenIPLMostRunsData_WithWrongHeader_ShouldThrowException" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.018"/>
+  <testcase name="givenIPLMostWktsData_whenSortedAccordingToBowlingAverage_shouldReturnSortedResults" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.195"/>
+  <testcase name="givenIPLMostWktsData_whenSortedAccordingToStringRateWithFiveWicketsAndFourWicket_shouldReturnSortedResults" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.183"/>
+  <testcase name="givenIPLMostWktssData_whenSortedAccordingToWicketsWithBowlingAverage_shouldReturnSortedResults" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.181"/>
+  <testcase name="givenIPLMostRunsData_whenSortedAccordingToBattingAverage_shouldReturnSortedResults" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.154"/>
+  <testcase name="givenIPLMostRunsData_shouldReturnTotalNumberOfPlayers" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.145"/>
+  <testcase name="givenIPLMostWktsData_shouldReturnTotalNumberOfPlayers" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.118"/>
+  <testcase name="givenIPLMostWktsData_whenSortedAccordingToEconomy_shouldReturnSortedResults" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.125"/>
+  <testcase name="givenIPL2019MostRunsData_whenSortedAccordingToBattingAverage_shouldReturnTotalNumberOfRunsOfPlayer" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.129"/>
+  <testcase name="givenIPL2019MostRunsData_whenSortedAccordingToSixsAndFours_shouldReturnSrikeRate" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.114"/>
+  <testcase name="givenIPLMostWktsData_whenSortedAccordingToBowlingAverageWithStringRate_shouldReturnSortedResults" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.121"/>
+  <testcase name="givenIPLMostWktsData_whenSortedAccordingToStrikeRate_shouldReturnSortedResults" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.109"/>
   <testcase name="givenIPLMostRunsData_whenSortedAccordingToStrikeRate_shouldReturnSortedResults" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.096"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>

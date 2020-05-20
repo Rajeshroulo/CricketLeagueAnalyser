@@ -24,6 +24,11 @@ public class CricketLeagueAnalyser {
         return this.getSortedCricketLeagueData(censusComparator.reversed());
     }
 
+    public String getSortedBatsmanDataAccordingToSixsAndFours() throws CricketLeagueAnalyserException {
+        Comparator<CricketAnalyserDAO> censusComparator = Comparator.comparing(iplData -> (iplData.six*6 + iplData.four*4));
+        return this.getSortedCricketLeagueData(censusComparator.reversed());
+    }
+
     private String getSortedCricketLeagueData(Comparator<CricketAnalyserDAO> censusComparator) throws CricketLeagueAnalyserException {
         if(iplAnalyserMap == null || iplAnalyserMap.size() == 0 ) {
             throw new CricketLeagueAnalyserException("No Data",

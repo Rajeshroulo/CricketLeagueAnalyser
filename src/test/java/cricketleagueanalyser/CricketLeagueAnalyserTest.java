@@ -97,4 +97,29 @@ public class CricketLeagueAnalyserTest {
         } catch (CricketLeagueAnalyserException e) {}
     }
 
+    @Test
+    public void givenIPL2019MostRunsData_whenSortedAccordingToSixsAndFours_shouldReturnSortedResults() {
+        try {
+            CricketLeagueAnalyser cricketLeagueAnalyser = new CricketLeagueAnalyser();
+            cricketLeagueAnalyser.loadBatsmanData(IPL_MOSTRUNS_DATA);
+            String sortedBatsmanData = cricketLeagueAnalyser.getSortedBatsmanDataAccordingToSixsAndFours();
+            BatsmanDataCsv[] iplBatsmanData = new Gson().fromJson(sortedBatsmanData, BatsmanDataCsv[].class);
+            Assert.assertEquals("Andre Russell", iplBatsmanData[0].player);
+            Assert.assertEquals("Shakib Al Hasan", iplBatsmanData[99].player);
+        } catch (CricketLeagueAnalyserException e) {}
+    }
+
+    @Test
+    public void givenIPL2019MostRunsData_whenSortedAccordingToSixsAndFours_shouldReturnSrikeRate() {
+        try {
+            CricketLeagueAnalyser cricketLeagueAnalyser = new CricketLeagueAnalyser();
+            cricketLeagueAnalyser.loadBatsmanData(IPL_MOSTRUNS_DATA);
+            String sortedBatsmanData = cricketLeagueAnalyser.getSortedBatsmanDataAccordingToSixsAndFours();
+            BatsmanDataCsv[] iplBatsmanData = new Gson().fromJson(sortedBatsmanData, BatsmanDataCsv[].class);
+            Assert.assertEquals(204.81, iplBatsmanData[0].strikeRate,0.001);
+            Assert.assertEquals(90.0, iplBatsmanData[99].strikeRate,0.001);
+        } catch (CricketLeagueAnalyserException e) {}
+    }
+
+
 }

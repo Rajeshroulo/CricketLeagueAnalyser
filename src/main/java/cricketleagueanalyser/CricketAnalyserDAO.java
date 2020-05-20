@@ -13,9 +13,12 @@ public class CricketAnalyserDAO {
         this.four = batsmanDataCsv.four;
         this.six = batsmanDataCsv.six;
         this.runs = batsmanDataCsv.runs;
-        this.average = batsmanDataCsv.average;
-        this.strikeRate = batsmanDataCsv.strikeRate;
+        this.average = batsmanDataCsv.battingAverage;
+        this.strikeRate = batsmanDataCsv.battingStrikeRate;
     }
 
+    public Object getIPLDTO() {
+        return new BatsmanDataCsv(player, runs, average, strikeRate, four, six);
 
+    }
 }

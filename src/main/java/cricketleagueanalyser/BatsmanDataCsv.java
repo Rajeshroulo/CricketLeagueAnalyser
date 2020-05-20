@@ -17,12 +17,22 @@ public class BatsmanDataCsv {
     public int runs;
 
     @CsvBindByName(column = "Avg", required = true)
-    public double average;
+    public double battingAverage;
+
 
     @CsvBindByName(column = "SR", required = true)
-    public double strikeRate;
+    public double battingStrikeRate;
 
     public BatsmanDataCsv() { }
+
+    public BatsmanDataCsv(String player, int runs, double battingAverage, double battingStrikeRate, int four, int six) {
+        this.player = player;
+        this.battingAverage = battingAverage;
+        this.battingStrikeRate = battingStrikeRate;
+        this.runs = runs;
+        this.four = four;
+        this.six = six;
+    }
 
     @Override
     public String toString() {
@@ -31,8 +41,8 @@ public class BatsmanDataCsv {
                 ", four=" + four +
                 ", six=" + six +
                 ", runs=" + runs +
-                ", average=" + average +
-                ", strikeRate=" + strikeRate +
+                ", average=" + battingAverage+
+                ", strikeRate=" + battingStrikeRate +
                 '}';
     }
 

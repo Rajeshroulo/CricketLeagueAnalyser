@@ -53,6 +53,10 @@ public class CricketLeagueAnalyser {
         return this.getSortedCricketLeagueData(sortByRunsWithAverage.reversed(),cricket);
     }
 
+    public String getSortedDataAccordingToEconomy(Cricket cricket) throws CricketLeagueAnalyserException {
+        Comparator<CricketAnalyserDAO> sortByEconomy = Comparator.comparing(iplData -> iplData.economy);
+        return this.getSortedCricketLeagueData(sortByEconomy.reversed(),cricket);
+    }
 
     private String getSortedCricketLeagueData(Comparator<CricketAnalyserDAO> censusComparator, Cricket cricket) throws CricketLeagueAnalyserException {
         if(iplAnalyserMap == null || iplAnalyserMap.size() == 0 ) {

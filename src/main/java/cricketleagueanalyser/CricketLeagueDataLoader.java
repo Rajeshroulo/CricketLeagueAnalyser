@@ -17,14 +17,22 @@ import java.util.stream.StreamSupport;
 public class CricketLeagueDataLoader {
     Map<String, CricketAnalyserDAO> iplAnalyserMap = new HashMap<>();
 
-    public Map<String,CricketAnalyserDAO> getCricketLeagueData(String csvFilePath) throws CricketLeagueAnalyserException {
+    public <E> Map<String,CricketAnalyserDAO> getCricketLeagueData(Class<E> iplDataCsvClass,String csvFilePath) throws CricketLeagueAnalyserException {
         try ( Reader reader = Files.newBufferedReader(Paths.get(csvFilePath)))
         {
             ICSVBuilder csvBuilder = CSVBuilderFactory.createCSVBuilder();
-            Iterator<BatsmanDataCsv> csvFileIterator = csvBuilder.getCSVFileIterator(reader, BatsmanDataCsv.class);
-            Iterable<BatsmanDataCsv> csvIterable = () -> csvFileIterator;
-            StreamSupport.stream(csvIterable.spliterator(),false).
-                    forEach(iplDataCsv -> iplAnalyserMap.put(iplDataCsv.player,new CricketAnalyserDAO(iplDataCsv)));
+            Iterator<E> csvFileIterator = csvBuilder.getCSVFileIterator(reader, iplDataCsvClass);
+            Iterable<E> csvIterable = () -> csvFileIterator;
+            if(iplDataCsvClass.getName().equals("cricketleagueanalyser.BatsmanDataCsv")) {
+                StreamSupport.stream(csvIterable.spliterator(), false).
+                        map(BatsmanDataCsv.class::cast).
+                        forEach(iplDataCsv -> iplAnalyserMap.put(iplDataCsv.player, new CricketAnalyserDAO(iplDataCsv)));
+            } else if(iplDataCsvClass.getName().equals("cricketleagueanalyser.BowlerDataCsv")) {
+                StreamSupport.stream(csvIterable.spliterator(), false).
+                        map(BowlerDataCsv.class::cast).
+                        forEach(iplDataCsv -> iplAnalyserMap.put(iplDataCsv.player, new CricketAnalyserDAO(iplDataCsv)));
+            }
+
             if(iplAnalyserMap.size() == 0)
                 throw new CricketLeagueAnalyserException("NO_DATA",
                         CricketLeagueAnalyserException.ExceptionType.NO_DATA);

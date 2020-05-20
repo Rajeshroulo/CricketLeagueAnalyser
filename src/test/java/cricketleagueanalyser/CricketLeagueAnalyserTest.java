@@ -189,4 +189,17 @@ public class CricketLeagueAnalyserTest {
             Assert.assertEquals(99,numOfRecords);
         } catch (CricketLeagueAnalyserException e) {}
     }
+
+    @Test
+    public void givenIPLMostWktsData_whenSortedAccordingToBowlingAverage_shouldReturnSortedResults() {
+        try {
+            CricketLeagueAnalyser cricketLeagueAnalyser = new CricketLeagueAnalyser(CricketLeagueAnalyser.Cricket.BOWLING);
+            cricketLeagueAnalyser.loadIPLData(IPL_MOSTWKTS_DATA);
+            String sortedBatsmanData = cricketLeagueAnalyser.getSortedDataAccordingToAverage(CricketLeagueAnalyser.Cricket.BOWLING);
+            BowlerDataCsv[] iplBatsmanData = new Gson().fromJson(sortedBatsmanData, BowlerDataCsv[].class);
+            Assert.assertEquals("Krishnappa Gowtham", iplBatsmanData[0].player);
+            Assert.assertEquals("Yusuf Pathan", iplBatsmanData[98].player);
+        } catch (CricketLeagueAnalyserException e) {}
+    }
+
 }

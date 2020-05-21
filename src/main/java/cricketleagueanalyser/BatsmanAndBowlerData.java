@@ -8,9 +8,9 @@ public class BatsmanAndBowlerData {
     public double battingAverage;
     public double bowlerAverage;
     public double battingStrikeRate;
+    public int wickets;
 
-
-    public BatsmanAndBowlerData(String player, int runs, double battingAverage, double battingStrikeRate, int four, int six, double bowlerAverage) {
+    public BatsmanAndBowlerData(String player, int runs, double battingAverage, double battingStrikeRate, int four, int six, double bowlerAverage, int wickets) {
         this.player = player;
         this.battingAverage = battingAverage;
         this.battingStrikeRate = battingStrikeRate;
@@ -18,5 +18,7 @@ public class BatsmanAndBowlerData {
         this.four = four;
         this.six = six;
         this.bowlerAverage = bowlerAverage;
+        this.wickets = wickets;
+
     }
 }

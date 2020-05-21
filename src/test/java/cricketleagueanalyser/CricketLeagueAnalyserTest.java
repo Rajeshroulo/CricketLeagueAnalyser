@@ -78,7 +78,7 @@ public class CricketLeagueAnalyserTest {
         try {
             CricketLeagueAnalyser cricketLeagueAnalyser = new CricketLeagueAnalyser(CricketLeagueAnalyser.Cricket.BATTING);
             cricketLeagueAnalyser.loadIPLData(IPL_MOSTRUNS_DATA);
-            String sortedBatsmanData = cricketLeagueAnalyser.getSortedDataAccordingToBattingAverage(CricketLeagueAnalyser.Cricket.BATTING);
+            String sortedBatsmanData = cricketLeagueAnalyser.getSortedDataAccordingToBattingAverage();
             BatsmanData[] iplBatsmanData = new Gson().fromJson(sortedBatsmanData, BatsmanData[].class);
             Assert.assertEquals("MS Dhoni", iplBatsmanData[0].player);
             Assert.assertEquals("Harpreet Brar", iplBatsmanData[99].player);
@@ -90,7 +90,7 @@ public class CricketLeagueAnalyserTest {
         try {
             CricketLeagueAnalyser cricketLeagueAnalyser = new CricketLeagueAnalyser(CricketLeagueAnalyser.Cricket.BATTING);
             cricketLeagueAnalyser.loadIPLData(IPL_MOSTRUNS_DATA);
-            String sortedBatsmanData = cricketLeagueAnalyser.getSortedDataAccordingToBattingStrikingRate(CricketLeagueAnalyser.Cricket.BATTING);
+            String sortedBatsmanData = cricketLeagueAnalyser.getSortedDataAccordingToBattingStrikingRate();
             BatsmanData[] iplBatsmanData = new Gson().fromJson(sortedBatsmanData, BatsmanData[].class);
             Assert.assertEquals("Ishant Sharma", iplBatsmanData[0].player);
             Assert.assertEquals("Bhuvneshwar Kumar", iplBatsmanData[99].player);
@@ -102,7 +102,7 @@ public class CricketLeagueAnalyserTest {
         try {
             CricketLeagueAnalyser cricketLeagueAnalyser = new CricketLeagueAnalyser(CricketLeagueAnalyser.Cricket.BATTING);
             cricketLeagueAnalyser.loadIPLData(IPL_MOSTRUNS_DATA);
-            String sortedBatsmanData = cricketLeagueAnalyser.getSortedDataAccordingToSixsAndFours(CricketLeagueAnalyser.Cricket.BATTING);
+            String sortedBatsmanData = cricketLeagueAnalyser.getSortedDataAccordingToSixsAndFours();
             BatsmanData[] iplBatsmanData = new Gson().fromJson(sortedBatsmanData, BatsmanData[].class);
             Assert.assertEquals("Andre Russell", iplBatsmanData[0].player);
             Assert.assertEquals("Shakib Al Hasan", iplBatsmanData[99].player);
@@ -114,7 +114,7 @@ public class CricketLeagueAnalyserTest {
         try {
             CricketLeagueAnalyser cricketLeagueAnalyser = new CricketLeagueAnalyser(CricketLeagueAnalyser.Cricket.BATTING);
             cricketLeagueAnalyser.loadIPLData(IPL_MOSTRUNS_DATA);
-            String sortedBatsmanData = cricketLeagueAnalyser.getSortedDataAccordingToSixsAndFours(CricketLeagueAnalyser.Cricket.BATTING);
+            String sortedBatsmanData = cricketLeagueAnalyser.getSortedDataAccordingToSixsAndFours();
             BatsmanData[] iplBatsmanData = new Gson().fromJson(sortedBatsmanData, BatsmanData[].class);
             Assert.assertEquals(204.81, iplBatsmanData[0].battingStrikeRate,0.001);
             Assert.assertEquals(90.0, iplBatsmanData[99].battingStrikeRate,0.001);
@@ -126,7 +126,7 @@ public class CricketLeagueAnalyserTest {
         try {
             CricketLeagueAnalyser cricketLeagueAnalyser = new CricketLeagueAnalyser(CricketLeagueAnalyser.Cricket.BATTING);
             cricketLeagueAnalyser.loadIPLData(IPL_MOSTRUNS_DATA);
-            String sortedBatsmanData = cricketLeagueAnalyser.getSortedDataAccordingToBattingStrikingRate(CricketLeagueAnalyser.Cricket.BATTING);
+            String sortedBatsmanData = cricketLeagueAnalyser.getSortedDataAccordingToBattingStrikingRate();
             BatsmanData[] iplBatsmanData = new Gson().fromJson(sortedBatsmanData, BatsmanData[].class);
             Assert.assertEquals(0.0, iplBatsmanData[0].battingAverage,0.001);
             Assert.assertEquals(4.0, iplBatsmanData[99].battingAverage,0.001);
@@ -138,7 +138,7 @@ public class CricketLeagueAnalyserTest {
         try {
             CricketLeagueAnalyser cricketLeagueAnalyser = new CricketLeagueAnalyser(CricketLeagueAnalyser.Cricket.BATTING);
             cricketLeagueAnalyser.loadIPLData(IPL_MOSTRUNS_DATA);
-            String sortedBatsmanData = cricketLeagueAnalyser.getSortedDataAccordingToBattingAverage(CricketLeagueAnalyser.Cricket.BATTING);
+            String sortedBatsmanData = cricketLeagueAnalyser.getSortedDataAccordingToBattingAverage();
             BatsmanData[] iplBatsmanData = new Gson().fromJson(sortedBatsmanData, BatsmanData[].class);
             Assert.assertEquals(416, iplBatsmanData[0].runs);
             Assert.assertEquals(20, iplBatsmanData[99].runs);
@@ -150,7 +150,7 @@ public class CricketLeagueAnalyserTest {
         try {
             CricketLeagueAnalyser cricketLeagueAnalyser = new CricketLeagueAnalyser(CricketLeagueAnalyser.Cricket.BATTING);
             cricketLeagueAnalyser.loadIPLData(IPL_MOSTRUNS_DATA);
-            String sortedBatsmanData = cricketLeagueAnalyser.getSortedDataAccordingToBattingStrikeRateWithSixsAndFours(CricketLeagueAnalyser.Cricket.BATTING);
+            String sortedBatsmanData = cricketLeagueAnalyser.getSortedDataAccordingToBattingStrikeRateWithSixsAndFours();
             BatsmanData[] iplBatsmanData = new Gson().fromJson(sortedBatsmanData, BatsmanData[].class);
             Assert.assertEquals("Andre Russell", iplBatsmanData[0].player);
             Assert.assertEquals("Shakib Al Hasan", iplBatsmanData[99].player);
@@ -162,7 +162,7 @@ public class CricketLeagueAnalyserTest {
         try {
             CricketLeagueAnalyser cricketLeagueAnalyser = new CricketLeagueAnalyser(CricketLeagueAnalyser.Cricket.BATTING);
             cricketLeagueAnalyser.loadIPLData(IPL_MOSTRUNS_DATA);
-            String sortedBatsmanData = cricketLeagueAnalyser.getSortedDataAccordingToBattingAverageWithBattingStrikeRate(CricketLeagueAnalyser.Cricket.BATTING);
+            String sortedBatsmanData = cricketLeagueAnalyser.getSortedDataAccordingToBattingAverageWithBattingStrikeRate();
             BatsmanData[] iplBatsmanData = new Gson().fromJson(sortedBatsmanData, BatsmanData[].class);
             Assert.assertEquals("MS Dhoni", iplBatsmanData[0].player);
             Assert.assertEquals("Tim Southee", iplBatsmanData[99].player);
@@ -174,7 +174,7 @@ public class CricketLeagueAnalyserTest {
         try {
             CricketLeagueAnalyser cricketLeagueAnalyser = new CricketLeagueAnalyser(CricketLeagueAnalyser.Cricket.BATTING);
             cricketLeagueAnalyser.loadIPLData(IPL_MOSTRUNS_DATA);
-            String sortedBatsmanData = cricketLeagueAnalyser.getSortedDataAccordingToRunsWithBattingAverage(CricketLeagueAnalyser.Cricket.BATTING);
+            String sortedBatsmanData = cricketLeagueAnalyser.getSortedDataAccordingToRunsWithBattingAverage();
             BatsmanData[] iplBatsmanData = new Gson().fromJson(sortedBatsmanData, BatsmanData[].class);
             Assert.assertEquals("David Warner ", iplBatsmanData[0].player);
             Assert.assertEquals("Tim Southee", iplBatsmanData[99].player);
@@ -195,7 +195,7 @@ public class CricketLeagueAnalyserTest {
         try {
             CricketLeagueAnalyser cricketLeagueAnalyser = new CricketLeagueAnalyser(CricketLeagueAnalyser.Cricket.BOWLING);
             cricketLeagueAnalyser.loadIPLData(IPL_MOSTWKTS_DATA);
-            String sortedBatsmanData = cricketLeagueAnalyser.getSortedDataAccordingToBowlerAverage(CricketLeagueAnalyser.Cricket.BOWLING);
+            String sortedBatsmanData = cricketLeagueAnalyser.getSortedDataAccordingToBowlerAverage();
             BowlerData[] iplBatsmanData = new Gson().fromJson(sortedBatsmanData, BowlerData[].class);
             Assert.assertEquals("Krishnappa Gowtham", iplBatsmanData[0].player);
             Assert.assertEquals("Tim Southee", iplBatsmanData[1].player);
@@ -208,7 +208,7 @@ public class CricketLeagueAnalyserTest {
         try {
             CricketLeagueAnalyser cricketLeagueAnalyser = new CricketLeagueAnalyser(CricketLeagueAnalyser.Cricket.BOWLING);
             cricketLeagueAnalyser.loadIPLData(IPL_MOSTWKTS_DATA);
-            String sortedBatsmanData = cricketLeagueAnalyser.getSortedDataAccordingToBowlerStrikeRate(CricketLeagueAnalyser.Cricket.BOWLING);
+            String sortedBatsmanData = cricketLeagueAnalyser.getSortedDataAccordingToBowlerStrikeRate();
             BowlerData[] iplBatsmanData = new Gson().fromJson(sortedBatsmanData, BowlerData[].class);
             Assert.assertEquals("Krishnappa Gowtham", iplBatsmanData[0].player);
             Assert.assertEquals("Prasidh Krishna", iplBatsmanData[1].player);
@@ -221,7 +221,7 @@ public class CricketLeagueAnalyserTest {
         try {
             CricketLeagueAnalyser cricketLeagueAnalyser = new CricketLeagueAnalyser(CricketLeagueAnalyser.Cricket.BOWLING);
             cricketLeagueAnalyser.loadIPLData(IPL_MOSTWKTS_DATA);
-            String sortedBatsmanData = cricketLeagueAnalyser.getSortedDataAccordingToEconomy(CricketLeagueAnalyser.Cricket.BOWLING);
+            String sortedBatsmanData = cricketLeagueAnalyser.getSortedDataAccordingToEconomy();
             BowlerData[] iplBatsmanData = new Gson().fromJson(sortedBatsmanData, BowlerData[].class);
             Assert.assertEquals("Ben Cutting", iplBatsmanData[0].player);
             Assert.assertEquals("Shivam Dube", iplBatsmanData[98].player);
@@ -233,7 +233,7 @@ public class CricketLeagueAnalyserTest {
         try {
             CricketLeagueAnalyser cricketLeagueAnalyser = new CricketLeagueAnalyser(CricketLeagueAnalyser.Cricket.BOWLING);
             cricketLeagueAnalyser.loadIPLData(IPL_MOSTWKTS_DATA);
-            String sortedBatsmanData = cricketLeagueAnalyser.getSortedDataAccordingToBowlerStrikeRateWith5WicketsAnd4Wickets(CricketLeagueAnalyser.Cricket.BOWLING);
+            String sortedBatsmanData = cricketLeagueAnalyser.getSortedDataAccordingToBowlerStrikeRateWith5WicketsAnd4Wickets();
             BowlerData[] iplBatsmanData = new Gson().fromJson(sortedBatsmanData, BowlerData[].class);
             Assert.assertEquals("Lasith Malinga", iplBatsmanData[0].player);
             Assert.assertEquals("Yusuf Pathan", iplBatsmanData[99].player);
@@ -245,7 +245,7 @@ public class CricketLeagueAnalyserTest {
         try {
             CricketLeagueAnalyser cricketLeagueAnalyser = new CricketLeagueAnalyser(CricketLeagueAnalyser.Cricket.BOWLING);
             cricketLeagueAnalyser.loadIPLData(IPL_MOSTWKTS_DATA);
-            String sortedBatsmanData = cricketLeagueAnalyser.getSortedDataAccordingToBowlingAverageWithBowlingStrikeRate(CricketLeagueAnalyser.Cricket.BOWLING);
+            String sortedBatsmanData = cricketLeagueAnalyser.getSortedDataAccordingToBowlingAverageWithBowlingStrikeRate();
             BowlerData[] iplBatsmanData = new Gson().fromJson(sortedBatsmanData, BowlerData[].class);
             Assert.assertEquals("Krishnappa Gowtham", iplBatsmanData[0].player);
             Assert.assertEquals("Yusuf Pathan", iplBatsmanData[98].player);
@@ -257,7 +257,7 @@ public class CricketLeagueAnalyserTest {
         try {
             CricketLeagueAnalyser cricketLeagueAnalyser = new CricketLeagueAnalyser(CricketLeagueAnalyser.Cricket.BOWLING);
             cricketLeagueAnalyser.loadIPLData(IPL_MOSTWKTS_DATA);
-            String sortedBatsmanData = cricketLeagueAnalyser.getSortedDataAccordingToWicketsWithBowlingAverage(CricketLeagueAnalyser.Cricket.BOWLING);
+            String sortedBatsmanData = cricketLeagueAnalyser.getSortedDataAccordingToWicketsWithBowlingAverage();
             BowlerData[] iplBatsmanData = new Gson().fromJson(sortedBatsmanData, BowlerData[].class);
             Assert.assertEquals("Imran Tahir", iplBatsmanData[0].player);
             Assert.assertEquals("Yusuf Pathan", iplBatsmanData[98].player);
@@ -278,12 +278,23 @@ public class CricketLeagueAnalyserTest {
         try {
             CricketLeagueAnalyser cricketLeagueAnalyser = new CricketLeagueAnalyser(CricketLeagueAnalyser.Cricket.BATTING_BOWLING);
             cricketLeagueAnalyser.loadIPLData(IPL_MOSTRUNS_DATA,IPL_MOSTWKTS_DATA);
-            String sortedCricketLeagueData = cricketLeagueAnalyser.getSortedDataAccordingToBattingAndBowlingAverage(CricketLeagueAnalyser.Cricket.BATTING_BOWLING);
+            String sortedCricketLeagueData = cricketLeagueAnalyser.getSortedDataAccordingToBattingAndBowlingAverage();
             BatsmanAndBowlerData[] cricketLeagueData = new Gson().fromJson(sortedCricketLeagueData, BatsmanAndBowlerData[].class);
             Assert.assertEquals("MS Dhoni", cricketLeagueData[0].player);
             Assert.assertEquals("Harpreet Brar", cricketLeagueData[99].player);
         } catch (CricketLeagueAnalyserException e) {}
     }
 
+    @Test
+    public void givenIPLMostRunsandWktsData_whenSortedAccordingToRunsAndWickets_shouldReturnSortedResults() {
+        try {
+            CricketLeagueAnalyser cricketLeagueAnalyser = new CricketLeagueAnalyser(CricketLeagueAnalyser.Cricket.BATTING_BOWLING);
+            cricketLeagueAnalyser.loadIPLData(IPL_MOSTRUNS_DATA,IPL_MOSTWKTS_DATA);
+            String sortedCricketLeagueData = cricketLeagueAnalyser.getSortedDataAccordingToRunsAndWickets();
+            BatsmanAndBowlerData[] cricketLeagueData = new Gson().fromJson(sortedCricketLeagueData, BatsmanAndBowlerData[].class);
+            Assert.assertEquals("David Warner ", cricketLeagueData[0].player);
+            Assert.assertEquals("Tim Southee", cricketLeagueData[99].player);
+        } catch (CricketLeagueAnalyserException e) {}
+    }
 
 }

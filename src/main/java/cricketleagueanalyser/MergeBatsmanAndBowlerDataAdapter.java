@@ -13,7 +13,10 @@ public class MergeBatsmanAndBowlerDataAdapter  extends CricketLeagueDataAdapter 
         bowlersData = super.getCricketLeagueData(BowlerData.class,csvFilePath[1]);
         bowlersData.values().stream()
                 .filter(iplData -> batsmanData.get(iplData.player) != null)
-                .forEach(iplData -> batsmanData.get(iplData.player).bowlerAverage = iplData.bowlerAverage);
+                .forEach(iplData -> {
+                    batsmanData.get(iplData.player).bowlerAverage = iplData.bowlerAverage;
+                    batsmanData.get(iplData.player).wickets = iplData.wickets;
+                });
         return batsmanData;
     }
 

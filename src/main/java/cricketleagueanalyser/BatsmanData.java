@@ -17,18 +17,18 @@ public class BatsmanData {
     public int runs;
 
     @CsvBindByName(column = "Avg", required = true)
-    public double battingAverage;
+    public double batsmanAverage;
 
 
     @CsvBindByName(column = "SR", required = true)
-    public double battingStrikeRate;
+    public double batsmanStrikeRate;
 
     public BatsmanData() { }
 
-    public BatsmanData(String player, int runs, double battingAverage, double battingStrikeRate, int four, int six) {
+    public BatsmanData(String player, int runs, double batsmanAverage, double batsmanStrikeRate, int four, int six) {
         this.player = player;
-        this.battingAverage = battingAverage;
-        this.battingStrikeRate = battingStrikeRate;
+        this.batsmanAverage = batsmanAverage;
+        this.batsmanStrikeRate = batsmanStrikeRate;
         this.runs = runs;
         this.four = four;
         this.six = six;

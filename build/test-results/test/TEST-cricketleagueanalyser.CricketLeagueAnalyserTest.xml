@@ -1,86 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="cricketleagueanalyser.CricketLeagueAnalyserTest" tests="25" skipped="0" failures="1" errors="0" timestamp="2020-05-22T07:23:34" hostname="LAPTOP-U0R5V4IK" time="3.594">
+<testsuite name="cricketleagueanalyser.CricketLeagueAnalyserTest" tests="25" skipped="0" failures="0" errors="0" timestamp="2020-05-25T11:53:50" hostname="LAPTOP-U0R5V4IK" time="3.541">
   <properties/>
-  <testcase name="givenIPLMostRunsData_whenSortedAccordingToRunsWithBattingAverage_shouldReturnSortedResults" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.462"/>
-  <testcase name="givenIPLMostRunsData_WhenEmpty_ShouldThrowException" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.003"/>
-  <testcase name="givenIPLMostRunsandWktsData_shouldReturnTotalNumberOfRecords" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.274"/>
-  <testcase name="givenIPLMostRunsData_whenSortedAccordingToBattingAverageWithStrikeRate_shouldReturnSortedResults" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.156"/>
-  <testcase name="givenIPLMostRunsData_whenSortedAccordingToStrikeRate_shouldReturnBattingAverage" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.128">
-    <failure message="java.lang.AssertionError: expected:&lt;0.0&gt; but was:&lt;333.33&gt;" type="java.lang.AssertionError">java.lang.AssertionError: expected:&lt;0.0&gt; but was:&lt;333.33&gt;
-	at org.junit.Assert.fail(Assert.java:88)
-	at org.junit.Assert.failNotEquals(Assert.java:834)
-	at org.junit.Assert.assertEquals(Assert.java:553)
-	at org.junit.Assert.assertEquals(Assert.java:683)
-	at cricketleagueanalyser.CricketLeagueAnalyserTest.givenIPLMostRunsData_whenSortedAccordingToStrikeRate_shouldReturnBattingAverage(CricketLeagueAnalyserTest.java:131)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:110)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:38)
-	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:62)
-	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
-	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
-	at com.sun.proxy.$Proxy2.processTestClass(Unknown Source)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:118)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:182)
-	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:164)
-	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:412)
-	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
-	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:48)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:56)
-	at java.lang.Thread.run(Thread.java:748)
-</failure>
-  </testcase>
-  <testcase name="givenIPLMOstRunsData_WithWrongPath_ShouldThrowException" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.002"/>
-  <testcase name="givenIPLMostRunsandWktsData_whenSortedAccordingToRunsAndWickets_shouldReturnSortedResults" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.343"/>
-  <testcase name="givenIPLMostRunsData_WithWrongType_ShouldThrowException" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.006"/>
-  <testcase name="givenIPLMostRunsData_WithWrongDelimiter_ShouldThrowException" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.001"/>
-  <testcase name="givenIPLMostRunsandWktsData_whenSortedAccordingToBattingAndBowlingAverage_shouldReturnSortedResults" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.295"/>
-  <testcase name="givenIPLMostRunsData_whenSortedAccordingToSixsAndFours_shouldReturnSortedResults" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.15"/>
-  <testcase name="givenIPLMostRuns_whenSortedAccordingToStrikeRateWithSixsAndFours_shouldReturnSortedResults" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.158"/>
-  <testcase name="givenIPLMostRunsData_WithWrongHeader_ShouldThrowException" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.016"/>
-  <testcase name="givenIPLMostWktsData_whenSortedAccordingToBowlingAverage_shouldReturnSortedResults" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.175"/>
-  <testcase name="givenIPLMostWktsData_whenSortedAccordingToStringRateWithFiveWicketsAndFourWicket_shouldReturnSortedResults" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.169"/>
-  <testcase name="givenIPLMostWktssData_whenSortedAccordingToWicketsWithBowlingAverage_shouldReturnSortedResults" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.163"/>
-  <testcase name="givenIPLMostRunsData_whenSortedAccordingToBattingAverage_shouldReturnSortedResults" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.132"/>
-  <testcase name="givenIPLMostRunsData_shouldReturnTotalNumberOfPlayers" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.105"/>
-  <testcase name="givenIPLMostWktsData_shouldReturnTotalNumberOfPlayers" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.142"/>
-  <testcase name="givenIPLMostWktsData_whenSortedAccordingToEconomy_shouldReturnSortedResults" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.11"/>
-  <testcase name="givenIPL2019MostRunsData_whenSortedAccordingToBattingAverage_shouldReturnTotalNumberOfRunsOfPlayer" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.128"/>
-  <testcase name="givenIPL2019MostRunsData_whenSortedAccordingToSixsAndFours_shouldReturnSrikeRate" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.101"/>
-  <testcase name="givenIPLMostWktsData_whenSortedAccordingToBowlingAverageWithStringRate_shouldReturnSortedResults" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.131"/>
-  <testcase name="givenIPLMostWktsData_whenSortedAccordingToStrikeRate_shouldReturnSortedResults" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.117"/>
-  <testcase name="givenIPLMostRunsData_whenSortedAccordingToStrikeRate_shouldReturnSortedResults" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.099"/>
+  <testcase name="givenIPLMostWktsData_WhenSortedAccordingToStringRateWithFiveWicketsAndFourWicket_ShouldReturnSortedResults" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.424"/>
+  <testcase name="givenIPLMostRunsData_WhenEmpty_ShouldThrowException" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.007"/>
+  <testcase name="givenIPLMostRunsandWktsData_shouldReturnTotalNumberOfRecords" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.331"/>
+  <testcase name="givenIPLMostRunsData_WhenSortedAccordingToBattingAverageWithStrikeRate_ShouldReturnSortedResults" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.232"/>
+  <testcase name="givenIPL2019MostRunsData_WhenSortedAccordingToSixsAndFours_ShouldReturnSrikeRate" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.135"/>
+  <testcase name="givenIPLMOstRunsData_WithWrongPath_ShouldThrowException" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.005"/>
+  <testcase name="givenIPLMostRunsandWktsData_whenSortedAccordingToRunsAndWickets_shouldReturnSortedResults" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.277"/>
+  <testcase name="givenIPLMostRunsData_WhenSortedAccordingToStrikeRate_ShouldReturnBattingAverage" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.134"/>
+  <testcase name="givenIPLMostRunsData_WithWrongType_ShouldThrowException" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.025"/>
+  <testcase name="givenIPLMostRunsData_WhenSortedAccordingToRunsWithBattingAverage_ShouldReturnSortedResults" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.184"/>
+  <testcase name="givenIPLMostRunsData_WithWrongDelimiter_ShouldThrowException" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.009"/>
+  <testcase name="givenIPLMostRunsandWktsData_whenSortedAccordingToBattingAndBowlingAverage_shouldReturnSortedResults" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.253"/>
+  <testcase name="givenIPLMostRunsData_WithWrongHeader_ShouldThrowException" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.012"/>
+  <testcase name="givenIPL2019MostRunsData_WhenSortedAccordingToBattingAverage_ShouldReturnTotalNumberOfRunsOfPlayer" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.118"/>
+  <testcase name="givenIPLMostRuns_WhenSortedAccordingToStrikeRateWithSixsAndFours_shouldReturnSortedResults" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.123"/>
+  <testcase name="givenIPLMostWktssData_whenSortedAccordingToWicketsWithBowlingAverage_shouldReturnSortedResults" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.18"/>
+  <testcase name="givenIPLMostRunsData_ShouldReturnTotalNumberOfPlayers" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.096"/>
+  <testcase name="givenIPLMostWktsData_WhenSortedAccordingToBowlingAverage_ShouldReturnSortedResults" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.126"/>
+  <testcase name="givenIPLMostWktsData_ShouldReturnTotalNumberOfPlayers" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.135"/>
+  <testcase name="givenIPLMostWktsData_WhenSortedAccordingToStrikeRate_ShouldReturnSortedResults" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.114"/>
+  <testcase name="givenIPLMostRunsData_WhenSortedAccordingToStrikeRate_ShouldReturnSortedResults" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.113"/>
+  <testcase name="givenIPLMostRunsData_WhenSortedAccordingToSixsAndFours_ShouldReturnSortedResults" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.104"/>
+  <testcase name="givenIPLMostRunsData_WhenSortedAccordingToBattingAverage_ShouldReturnSortedResults" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.107"/>
+  <testcase name="givenIPLMostWktsData_WhenSortedAccordingToEconomy_ShouldReturnSortedResults" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.123"/>
+  <testcase name="givenIPLMostWktsData_WhenSortedAccordingToBowlingAverageWithStringRate_ShouldReturnSortedResults" classname="cricketleagueanalyser.CricketLeagueAnalyserTest" time="0.113"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

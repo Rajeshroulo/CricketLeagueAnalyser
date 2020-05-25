@@ -15,7 +15,7 @@ public class CricketLeagueAnalyserTest {
     private static final String IPL_MOSTWKTS_DATA="src\\test\\resources\\IPL2019FactsheetMostWkts.csv";
 
     @Test
-    public void givenIPLMostRunsData_shouldReturnTotalNumberOfPlayers() {
+    public void givenIPLMostRunsData_ShouldReturnTotalNumberOfPlayers() {
         try{
             CricketLeagueAnalyser cricketLeagueAnalyser = new CricketLeagueAnalyser(CricketLeagueAnalyser.Cricket.BATTING);
             int numOfRecords = cricketLeagueAnalyser.loadIPLData(IPL_MOSTRUNS_DATA);
@@ -74,7 +74,7 @@ public class CricketLeagueAnalyserTest {
     }
 
     @Test
-    public void givenIPLMostRunsData_whenSortedAccordingToBattingAverage_shouldReturnSortedResults() {
+    public void givenIPLMostRunsData_WhenSortedAccordingToBattingAverage_ShouldReturnSortedResults() {
         try {
             CricketLeagueAnalyser cricketLeagueAnalyser = new CricketLeagueAnalyser(CricketLeagueAnalyser.Cricket.BATTING);
             cricketLeagueAnalyser.loadIPLData(IPL_MOSTRUNS_DATA);
@@ -86,7 +86,7 @@ public class CricketLeagueAnalyserTest {
     }
 
     @Test
-    public void givenIPLMostRunsData_whenSortedAccordingToStrikeRate_shouldReturnSortedResults() {
+    public void givenIPLMostRunsData_WhenSortedAccordingToStrikeRate_ShouldReturnSortedResults() {
         try {
             CricketLeagueAnalyser cricketLeagueAnalyser = new CricketLeagueAnalyser(CricketLeagueAnalyser.Cricket.BATTING);
             cricketLeagueAnalyser.loadIPLData(IPL_MOSTRUNS_DATA);
@@ -98,7 +98,7 @@ public class CricketLeagueAnalyserTest {
     }
 
     @Test
-    public void givenIPLMostRunsData_whenSortedAccordingToSixsAndFours_shouldReturnSortedResults() {
+    public void givenIPLMostRunsData_WhenSortedAccordingToSixsAndFours_ShouldReturnSortedResults() {
         try {
             CricketLeagueAnalyser cricketLeagueAnalyser = new CricketLeagueAnalyser(CricketLeagueAnalyser.Cricket.BATTING);
             cricketLeagueAnalyser.loadIPLData(IPL_MOSTRUNS_DATA);
@@ -110,7 +110,7 @@ public class CricketLeagueAnalyserTest {
     }
 
     @Test
-    public void givenIPL2019MostRunsData_whenSortedAccordingToSixsAndFours_shouldReturnSrikeRate() {
+    public void givenIPL2019MostRunsData_WhenSortedAccordingToSixsAndFours_ShouldReturnSrikeRate() {
         try {
             CricketLeagueAnalyser cricketLeagueAnalyser = new CricketLeagueAnalyser(CricketLeagueAnalyser.Cricket.BATTING);
             cricketLeagueAnalyser.loadIPLData(IPL_MOSTRUNS_DATA);
@@ -122,19 +122,19 @@ public class CricketLeagueAnalyserTest {
     }
 
     @Test
-    public void givenIPLMostRunsData_whenSortedAccordingToStrikeRate_shouldReturnBattingAverage() {
+    public void givenIPLMostRunsData_WhenSortedAccordingToStrikeRate_ShouldReturnBattingAverage() {
         try {
             CricketLeagueAnalyser cricketLeagueAnalyser = new CricketLeagueAnalyser(CricketLeagueAnalyser.Cricket.BATTING);
             cricketLeagueAnalyser.loadIPLData(IPL_MOSTRUNS_DATA);
             String sortedBatsmanData = cricketLeagueAnalyser.getSortedData(CricketLeagueAnalyser.CompareType.BATSMAN_STRIKE);
             BatsmanData[] iplBatsmanData = new Gson().fromJson(sortedBatsmanData, BatsmanData[].class);
-            Assert.assertEquals(0.0, iplBatsmanData[0].batsmanStrikeRate,0.001);
-            Assert.assertEquals(4.0, iplBatsmanData[99].batsmanStrikeRate,0.001);
+            Assert.assertEquals(333.33, iplBatsmanData[0].batsmanStrikeRate,0.001);
+            Assert.assertEquals(63.15, iplBatsmanData[99].batsmanStrikeRate,0.001);
         } catch (CricketLeagueAnalyserException e) {}
     }
 
     @Test
-    public void givenIPL2019MostRunsData_whenSortedAccordingToBattingAverage_shouldReturnTotalNumberOfRunsOfPlayer() {
+    public void givenIPL2019MostRunsData_WhenSortedAccordingToBattingAverage_ShouldReturnTotalNumberOfRunsOfPlayer() {
         try {
             CricketLeagueAnalyser cricketLeagueAnalyser = new CricketLeagueAnalyser(CricketLeagueAnalyser.Cricket.BATTING);
             cricketLeagueAnalyser.loadIPLData(IPL_MOSTRUNS_DATA);
@@ -146,7 +146,7 @@ public class CricketLeagueAnalyserTest {
     }
 
     @Test
-    public void givenIPLMostRuns_whenSortedAccordingToStrikeRateWithSixsAndFours_shouldReturnSortedResults() {
+    public void givenIPLMostRuns_WhenSortedAccordingToStrikeRateWithSixsAndFours_shouldReturnSortedResults() {
         try {
             CricketLeagueAnalyser cricketLeagueAnalyser = new CricketLeagueAnalyser(CricketLeagueAnalyser.Cricket.BATTING);
             cricketLeagueAnalyser.loadIPLData(IPL_MOSTRUNS_DATA);
@@ -158,7 +158,7 @@ public class CricketLeagueAnalyserTest {
     }
 
     @Test
-    public void givenIPLMostRunsData_whenSortedAccordingToBattingAverageWithStrikeRate_shouldReturnSortedResults() {
+    public void givenIPLMostRunsData_WhenSortedAccordingToBattingAverageWithStrikeRate_ShouldReturnSortedResults() {
         try {
             CricketLeagueAnalyser cricketLeagueAnalyser = new CricketLeagueAnalyser(CricketLeagueAnalyser.Cricket.BATTING);
             cricketLeagueAnalyser.loadIPLData(IPL_MOSTRUNS_DATA);
@@ -170,7 +170,7 @@ public class CricketLeagueAnalyserTest {
     }
 
     @Test
-    public void givenIPLMostRunsData_whenSortedAccordingToRunsWithBattingAverage_shouldReturnSortedResults() {
+    public void givenIPLMostRunsData_WhenSortedAccordingToRunsWithBattingAverage_ShouldReturnSortedResults() {
         try {
             CricketLeagueAnalyser cricketLeagueAnalyser = new CricketLeagueAnalyser(CricketLeagueAnalyser.Cricket.BATTING);
             cricketLeagueAnalyser.loadIPLData(IPL_MOSTRUNS_DATA);
@@ -182,7 +182,7 @@ public class CricketLeagueAnalyserTest {
     }
 
     @Test
-    public void givenIPLMostWktsData_shouldReturnTotalNumberOfPlayers() {
+    public void givenIPLMostWktsData_ShouldReturnTotalNumberOfPlayers() {
         try{
             CricketLeagueAnalyser cricketLeagueAnalyser = new CricketLeagueAnalyser(CricketLeagueAnalyser.Cricket.BOWLING);
             int numOfRecords = cricketLeagueAnalyser.loadIPLData(IPL_MOSTWKTS_DATA);
@@ -191,7 +191,7 @@ public class CricketLeagueAnalyserTest {
     }
 
     @Test
-    public void givenIPLMostWktsData_whenSortedAccordingToBowlingAverage_shouldReturnSortedResults() {
+    public void givenIPLMostWktsData_WhenSortedAccordingToBowlingAverage_ShouldReturnSortedResults() {
         try {
             CricketLeagueAnalyser cricketLeagueAnalyser = new CricketLeagueAnalyser(CricketLeagueAnalyser.Cricket.BOWLING);
             cricketLeagueAnalyser.loadIPLData(IPL_MOSTWKTS_DATA);
@@ -204,7 +204,7 @@ public class CricketLeagueAnalyserTest {
     }
 
     @Test
-    public void givenIPLMostWktsData_whenSortedAccordingToStrikeRate_shouldReturnSortedResults() {
+    public void givenIPLMostWktsData_WhenSortedAccordingToStrikeRate_ShouldReturnSortedResults() {
         try {
             CricketLeagueAnalyser cricketLeagueAnalyser = new CricketLeagueAnalyser(CricketLeagueAnalyser.Cricket.BOWLING);
             cricketLeagueAnalyser.loadIPLData(IPL_MOSTWKTS_DATA);
@@ -217,7 +217,7 @@ public class CricketLeagueAnalyserTest {
     }
 
     @Test
-    public void givenIPLMostWktsData_whenSortedAccordingToEconomy_shouldReturnSortedResults() {
+    public void givenIPLMostWktsData_WhenSortedAccordingToEconomy_ShouldReturnSortedResults() {
         try {
             CricketLeagueAnalyser cricketLeagueAnalyser = new CricketLeagueAnalyser(CricketLeagueAnalyser.Cricket.BOWLING);
             cricketLeagueAnalyser.loadIPLData(IPL_MOSTWKTS_DATA);
@@ -229,7 +229,7 @@ public class CricketLeagueAnalyserTest {
     }
 
     @Test
-    public void givenIPLMostWktsData_whenSortedAccordingToStringRateWithFiveWicketsAndFourWicket_shouldReturnSortedResults() {
+    public void givenIPLMostWktsData_WhenSortedAccordingToStringRateWithFiveWicketsAndFourWicket_ShouldReturnSortedResults() {
         try {
             CricketLeagueAnalyser cricketLeagueAnalyser = new CricketLeagueAnalyser(CricketLeagueAnalyser.Cricket.BOWLING);
             cricketLeagueAnalyser.loadIPLData(IPL_MOSTWKTS_DATA);
@@ -241,7 +241,7 @@ public class CricketLeagueAnalyserTest {
     }
 
     @Test
-    public void givenIPLMostWktsData_whenSortedAccordingToBowlingAverageWithStringRate_shouldReturnSortedResults() {
+    public void givenIPLMostWktsData_WhenSortedAccordingToBowlingAverageWithStringRate_ShouldReturnSortedResults() {
         try {
             CricketLeagueAnalyser cricketLeagueAnalyser = new CricketLeagueAnalyser(CricketLeagueAnalyser.Cricket.BOWLING);
             cricketLeagueAnalyser.loadIPLData(IPL_MOSTWKTS_DATA);
